@@ -101,6 +101,10 @@
 .secondary_header ul li:hover {
 	color: #000000;
 	cursor: pointer;
+	font-size: 20px;
+	color: #AC0000;
+	font-weight: bold;
+	
 }
 .left_article {
 	background-color: #FFFFFF;
