@@ -37,6 +37,24 @@
             })
     });
   }
+  var ranger = document.getElementById('ranger');
+  if (ranger != undefined) {
+      noUiSlider.create(ranger, {
+            start: [8],
+            step: 1,
+            connect: [true, false],
+            tooltips: [true],
+            range: {
+                'min': 4,
+                'max': 16
+            },
+            format: wNumb({
+                decimals: 0,
+                thousand: ',',
+                suffix: 'hr',
+            })
+    });
+  }
   $('#resets').on('click', function(){
       //document.getElementById("register-form").reset();
       location.reload();
