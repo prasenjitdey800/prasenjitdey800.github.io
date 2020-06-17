@@ -369,6 +369,14 @@ input[type=radio] {
   input[type=radio]:checked ~ .check::before {
     background: #329e5e; }
 
+input[type=checkbox] {
+  position: absolute;
+  visibility: hidden; }
+  input[type=checkbox]:checked ~ .check {
+    border: 1px solid #329e5e; }
+  input[type=checkbox]:checked ~ .check::before {
+    background: #329e5e; }
+
 ul {
   background: 0 0;
   position: relative;

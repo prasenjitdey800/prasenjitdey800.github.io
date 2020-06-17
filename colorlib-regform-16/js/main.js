@@ -37,8 +37,10 @@
             })
     });
   }
-  $('#reset').on('click', function(){
-      $('#register-form').reset();
+  $('#resets').on('click', function(){
+      //document.getElementById("register-form").reset();
+      location.reload();
+      //$('#register-form').reset();
   });
 
   $('#register-form').validate({
