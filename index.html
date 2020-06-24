@@ -8,6 +8,11 @@
 <link href="css\mycss.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css\w3.css">
 <link rel="stylesheet" href="css\slideshow.css">
+<style type="text/css">
+  audio{
+    width: 100%;
+  }
+</style>
 </head>
 <body onload="showSlides(1)">
 <div class="container">
@@ -161,11 +166,21 @@
       </table>
       
     </article>
-    <aside class="right_article"><a href="https://en.wikipedia.org/wiki/Human_resource_management" target="new"><img src="images\test1.jpg" alt="" width="400" height="200" class="placeholder"/></a> </aside>
+    <aside class="right_article"><video width="100%" height="230" controls>
+      <source src="images/videoplayback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video></a> <h3 class="w3-center">New to HRM? See the video OR audio</h3> 
+    <audio controls>
+        <source src="images/Recording1.mp3" type="audio/mpeg">
+        
+      </audio>
+      
+
+    </aside>
   
 
-  	<aside class="right_article"><img src="images\test2.jpg" alt="" width="400" height="200" class="placeholder" id="scream"/></aside>
-  	<aside class="right_article"><img src="images\test3.jpg" alt="" width="400" height="200" class="placeholder"/> </aside>
+  	<aside class="right_article"><object data="images\test3.jpg" width="100%" height="270"></object></aside>
+    <aside class="right_article"><img src="images\test2.jpg" alt="" width="400" height="200" class="placeholder" id="scream"/></aside>
     <aside class="right_article"><canvas alt="" width="400" height="120" class="placeholder" id="myCanvas"></canvas> 
       <p class="w3-center"><button onclick="myCanvas()">Get more idea about HRM</button></p>
 
@@ -231,19 +246,19 @@
   </map>
 
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
+  <div class="mySlides slide">
     <div class="numbertext">1 / 3</div>
     <img src="images/1947120.JPG" style="width:100%" height="600" usemap="#1947120">
     <div class="text">Tirtharaj from Q-Analytics </br> Ploy has helped to manage tasks easily</div>
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides slide">
     <div class="numbertext">2 / 3</div>
     <img src="images/1947113.JPG" style="width:100%" height="600" usemap="#1947113">
     <div class="text">Harish from UI-Pro </br> Ploy helps me better utilise my time, keeping hr engagements simple</div>
   </div>
 
-  <div class="mySlides fade">
+  <div class="mySlides slide">
     <div class="numbertext">3 / 3</div>
     <img src="images/1947121.JPG" style="width:100%" height="600" usemap="#1947121">
     <div class="text">Varad from Phi-Solutions </br> Ploy is the road to employee satisfaction </div>
@@ -295,16 +310,33 @@
   <div class="row blockDisplay">
     <div class="column_half left_half">
       <a href="https://www.zoho.com/people/" target="new"><h2 class="column_title" id="similar">Zoho People</h2></a>
-      <iframe src="https://www.zoho.com/people/" style="height:300px;width:100%;"></iframe>
+      <embed src="https://www.zoho.com/people/" style="height:300px;width:100%;">
     </div>
     <div class="column_half right_half">
       <a href="https://workforcenow.adp.com/workforcenow/login.html" target="new"><h2 class="column_title">ADP Workforce</h2></a>
-      <iframe src="https://workforcenow.adp.com/workforcenow/login.html" style="height:300px;width:100%;"><p>Unable to display the web page</p></iframe>
+      <embed src="https://workforcenow.adp.com/workforcenow/login.html" style="height:300px;width:100%;">
     </div>
   </div>
-  <footer class="secondary_header footer">
-    <div class="copyright">Made by <strong>Prasenjit Dey (1947114)</strong></div>
-  </footer>
+  
+    <!-- <div class="copyright">Made by <strong>Prasenjit Dey (1947114)</strong></div> -->
+    <div class="row blockDisplay">
+    <div class="column_half left_half">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.209298594826!2d88.34984731443603!3d22.68325123461763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89c92b44e3cbb%3A0xd75ed9a37a27363e!2s364%2C%20BBD%20Rd%2C%20Hindmotor%2C%20Uttarpara%2C%20West%20Bengal%20712233!5e0!3m2!1sen!2sin!4v1593024930692!5m2!1sen!2sin" width="100%" height="275" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="column_half right_half copyright">
+      <div class="copyright">Made by <strong>Prasenjit Dey (1947114)</strong></div>
+      <h3 class="column_title">CONTACT US:</h3>
+      <ul>
+            <li>Email: prasenjitdey800@gmail.com</li>
+            <li>Address: 364/A, BBD Road, Hindmotor, West Bengal.<br/> (Shown on the map on the left)</li>
+            <li>Current status: studying Msc Computer Science</li>
+            <li>Github: <a href="https://prasenjitdey800.github.io/">PrasenjitDey800</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/prasenjit-dey-6b1869167/">PrasenjitDey</a></li>
+             
+      </ol>
+    </div>
+  </div>
+  
 </div>
 </body>
 </html>
