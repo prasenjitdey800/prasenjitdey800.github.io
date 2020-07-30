@@ -20,8 +20,7 @@ ul.a {
 
 ul.b {
   list-style-type: square;
-  list-style-image: url('sqpurple.gif');
-  list-style-type: square;
+  
 }
 
 /*ol.c {
@@ -29,7 +28,7 @@ ul.b {
 }*/
 
 ol {
-  list-style-type: lower-alpha;
+  list-style-type: upper-roman;
 }
 
 .margs{
@@ -119,6 +118,7 @@ a:active {
 	padding-bottom: 60px;
 	background-color: #0a97b0;
 	clear: left;
+
 	border-radius: 30px;
 	box-sizing: border-box;
 	box-shadow: 0 4px 8px 0 rgba(100, 0, 0, 0.2), 0 6px 20px 0 rgba(100, 0, 0, 0.50);
@@ -149,8 +149,8 @@ a:active {
 	transition: all 0.3s linear;
 }
 @keyframes learn {
-    from {background-color: #0a97b0;}
-    to {background-color: #1b6ca8; transform: perspective(300px) translate3d(20px, 10px, 3px);}
+    from {background-color: #0a97b0;position: initial;opacity: 0.1;}
+    to {background-color: #1b6ca8; position: inherit;opacity: 0.8;transform: perspective(300px) translate3d(20px, 10px, 3px);}
 }
 .secondary_header ul li:hover {
 	color: #000000;
@@ -160,6 +160,7 @@ a:active {
 	font-weight: bold;
 	animation-name: learn;
 	animation-duration: 2s;
+	position: relative;
 }
 .left_article {
 	background-color: #FFFFFF;
@@ -251,6 +252,9 @@ a:active {
 }
 .left_half {
 	background-color: #1b6ca8;
+	border-style: dashed;
+	border-color: #FFFFFF;
+	border-radius: 20px;
 }
 .container .column_half.left_half h2 {
 	color: #FFFFFF;
@@ -260,6 +264,9 @@ a:active {
 .right_half {
 	background-color: #0a97b0;
 	color: #FFFFFF;
+	border-color: #FFFFFF;
+	border-style: dashed;
+	border-radius: 20px;
 	font-family: "Source Sans Pro";
 	text-align: center;
 	font-weight: bold;
@@ -267,6 +274,13 @@ a:active {
 .column_title {
 	padding-top: 25px;
 	padding-bottom: 25px;
+	border-style: groove;
+	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	text-shadow: 0 4px 8px 0 rgba(100, 0, 0, 0.2);
+	background-color: #000000;
+	opacity: 0.2;
+	color: #FFFFFF;
 }
 .copyright {
 	text-align: center;
