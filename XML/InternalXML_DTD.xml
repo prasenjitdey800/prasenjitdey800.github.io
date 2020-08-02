@@ -1,0 +1,85 @@
+<?xml version = "1.0" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="IntXMLCSS.css"?> 
+<!DOCTYPE document [ 
+<!ELEMENT document (clients_employee_covid_status)*> 
+<!ELEMENT user_for_feedback (company, confirmed, recovered, deaths)> 
+<!ELEMENT company (name, domain)> 
+<!ELEMENT name (#PCDATA)> 
+<!ELEMENT domain (#PCDATA)> 
+<!ELEMENT confirmed (#PCDATA)> 
+<!ELEMENT recovered (#PCDATA)*> 
+<!ELEMENT deaths (#PCDATA)> 
+] > 
+<document>
+  <title>This Page Shows the COVID status of employees of different client companies</title>
+  <title>Internal DTD and CSS Styling to XML Respectively</title>
+
+  <clients_employee_covid_status>
+    	<title>Client ID #111</title> 
+        <company>
+        	<name>Q-Analytics</name>
+        	<domain>Domain: Data Analytics</domain>
+        </company>
+        <confirmed>Confirmed: 40</confirmed> 
+        <recovered>Recovered: 23</recovered> 
+        <deaths>Deaths: 2</deaths>  
+    </clients_employee_covid_status> 
+
+    <clients_employee_covid_status>
+        <title>Client ID #112</title> 
+        <company>
+            <name>Client-hub</name>
+            <domain>Domain: Client Engagement</domain>
+        </company>
+        <confirmed>Confirmed: 70</confirmed> 
+        <recovered>Recovered: 37</recovered> 
+        <deaths>Deaths: 10</deaths>  
+    </clients_employee_covid_status>
+
+    <clients_employee_covid_status>
+        <title>Client ID #113</title> 
+        <company>
+            <name>UI-Pro</name>
+            <domain>Domain: UI/UX</domain>
+        </company>
+        <confirmed>Confirmed: 63</confirmed> 
+        <recovered>Recovered: 39</recovered> 
+        <deaths>Deaths: 5</deaths>  
+    </clients_employee_covid_status>
+
+    <clients_employee_covid_status>
+        <title>Client ID #114</title> 
+        <company>
+            <name>Power-Brainer</name>
+            <domain>Domain: Data Analytics</domain>
+        </company>
+        <confirmed>Confirmed: 39</confirmed> 
+        <recovered>Recovered: 19</recovered> 
+        <deaths>Deaths: 3</deaths>  
+    </clients_employee_covid_status>
+    
+    <clients_employee_covid_status>
+        <title>Client ID #115</title> 
+        <company>
+            <name>Phi-Solutions</name>
+            <domain>Domain: Data Analytics</domain>
+        </company>
+        <confirmed>Confirmed: 97</confirmed> 
+        <recovered>Recovered: 47</recovered> 
+        <deaths>Deaths: 16</deaths>  
+    </clients_employee_covid_status>
+
+    <clients_employee_covid_status>
+        <title>Client ID #116</title> 
+        <company>
+            <name>ThinkIT</name>
+            <domain>Domain: IT solutions</domain>
+        </company>
+        <confirmed>Confirmed: 50</confirmed> 
+        <recovered>Recovered: 20</recovered> 
+        <deaths>Deaths: 6</deaths>  
+    </clients_employee_covid_status>
+
+
+
+</document>

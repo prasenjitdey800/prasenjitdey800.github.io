@@ -1,0 +1,10 @@
+document [ 
+<!ELEMENT ploy (hrm, brief_intro, list_of_companies)>
+<!ELEMENT hrm (#PCDATA)>
+<!ELEMENT brief_intro (#PCDATA)>
+<!ELEMENT list_of_companies (company)>
+<!ELEMENT company (name,reliefs)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT reliefs (details_info)>
+<!ELEMENT details_info (#PCDATA)>
+]

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="ExtXMLCSS.css"?> 
+<!DOCTYPE list SYSTEM "simple.dtd">
+<ploy>
+    <hrm>Human resource management (HRM or HR) is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage. It is designed to maximize employee performance in service of an employer's strategic objectives. Human resource management is primarily concerned with the management of people within organizations, focusing on policies and systems.</hrm>
+    
+    <brief_intro>Ploy is the HR web application software developed to manage a company's workforce and contacts. It is easily customizable and is packaged in a neat and easy-to-use interface. With Ploy, your HR team can easily access information from your on-site computers or their mobile devices. This will make employee communication easier as your workforce can check their schedules on their smartphones or tablets. They can request time-offs from there and even submit their report there also.</brief_intro>
+    
+    <list_of_companies>
+
+      <company>
+        <name>Q-Analytics</name>
+        <reliefs>
+          <details_info>Work from home. Advance salary for 2 months as loan. Covid testing facility.</details_info>
+        </reliefs>
+      </company>
+
+      <company>
+        <name>Client-hub</name>
+        <reliefs>
+          <details_info>Work from home. Advance salary for 1 month as loan. Covid testing facility. Fair reimbursement to return home. </details_info>
+        </reliefs>
+      </company>
+
+      <company>
+        <name>UI-Pro</name>
+        <reliefs>
+          <details_info>Work from home. Covid testing facility</details_info>
+        </reliefs>
+      </company>
+
+      <company>
+        <name>Power-brainer</name>
+        <reliefs>
+          <details_info>Work from home.</details_info>
+        </reliefs>
+      </company>
+
+      <company>
+        <name>Phi-Solutions</name>
+        <reliefs>
+          <details_info>Work from home. Advance salary for 1 month as loan. Covid testing facility</details_info>
+        </reliefs>
+      </company>
+
+      <company>
+        <name>ThinkIT</name>
+        <reliefs>
+          <details_info>Work from home. Advance salary for 3 months as loan. Covid testing facility</details_info>
+        </reliefs>
+      </company>
+
+    </list_of_companies>
+ 
+ </ploy>
