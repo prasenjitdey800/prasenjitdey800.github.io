@@ -3,9 +3,9 @@ title{
 	font-weight:bolder; 
 	text-align:center; 
 	font-size:20px; 
-	background-color: #F39C12; 
+	background-color: #00bcd4; 
 	color: white; 
-	font-family: Poppins;
+	font-family: Times-New Roman;
 	border: 3px solid white; 
     margin:0.2em;  
     padding:0.2em;
@@ -15,11 +15,11 @@ company, confirmed, recovered, deaths
 { 
 	display:block; 
 	text-align:center;
-	font-family: Poppins; 
+	font-family: Times-New Roman; 
 }
  
 company { 
-	color:#34495E; 
+	color:#dd2c00; 
 	font-weight:bolder; 
 	font-size:20px; 
 	} 
