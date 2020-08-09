@@ -250,20 +250,6 @@
 		xmlDoc1 = parser.parseFromString(text,"text/xml");
 
 		alert(xmlDoc1.getElementsByTagName("confirmed")[0].childNodes[0].nodeValue);
-		/*var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-		    if (this.readyState == 4 && this.status == 200) {
-		    	alert('abcd');
-		    	myFunction(this);
-		    }
-		};
-		xhttp.open("GET", "test.xml", true);
-		xhttp.send();*/
-		//myFunction();
-		var xml = (new XMLSerializer()).serializeToString("../test.xml");
-		//var sessions = xmlDoc.getElementsByTagName("title");
-        //var txt = getContent(sessions);
-        alert(xml);
 		
 	}
 	function myFunction() {
