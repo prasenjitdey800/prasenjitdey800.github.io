@@ -1,15 +1,4 @@
-<?xml version = "1.0" standalone="yes"?>
-<?xml-stylesheet type="text/css" href="IntXMLCSS.css"?> 
-<!DOCTYPE document [ 
-<!ELEMENT document (clients_employee_covid_status)*> 
-<!ELEMENT user_for_feedback (company, confirmed, recovered, deaths)> 
-<!ELEMENT company (name, domain)> 
-<!ELEMENT name (#PCDATA)> 
-<!ELEMENT domain (#PCDATA)> 
-<!ELEMENT confirmed (#PCDATA)> 
-<!ELEMENT recovered (#PCDATA)*> 
-<!ELEMENT deaths (#PCDATA)> 
-] > 
+<?xml version="1.0" encoding="UTF-8"?>
 <document>
   <title>This Page Shows the COVID status of employees of different client companies</title>
   <title>Internal DTD and CSS Styling to XML Respectively</title>

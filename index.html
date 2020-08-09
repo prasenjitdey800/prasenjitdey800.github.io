@@ -78,7 +78,9 @@
             <li>HR analytics</li>
             
       </ol>
-      <h3 id="covid">Our clients - Covid-19 stats</h3>
+      <h3 id="covid">Our clients - Covid-19 stats  
+      	<button type="button" onclick="loadXMLDoc()">Load data</button>
+      </h3>
       
       <table class="w3-table w3-striped w3-bordered">
         <caption style="color: #C70039">***All these data has been collected with the approval of our clients</caption>
@@ -93,10 +95,10 @@
           </thead>
           <tbody>
           <tr class="w3-green">
-            <td class="w3-center">Q-Analytics</td>
-            <td class="w3-center">40</td>
-            <td class="w3-center">23</td>
-            <td class="w3-center">2</td>
+            <td class="w3-center" id="a1">Q-Analytics</td>
+            <td class="w3-center" id="a2">40</td>
+            <td class="w3-center" id="a3">23</td>
+            <td class="w3-center" id="a4">2</td>
             <td class="w3-justify">
               <li>Work from home</li>
               <li>Advance salary for 2 months as loan</li>
@@ -105,10 +107,10 @@
             </td>
           </tr>
           <tr class="w3-my-color-norm">
-            <td class="w3-center">Client-hub</td>
-            <td class="w3-center">70</td>
-            <td class="w3-center">37</td>
-            <td class="w3-center">10</td>
+            <td class="w3-center" id="b1">Client-hub</td>
+            <td class="w3-center" id="b2">70</td>
+            <td class="w3-center" id="b3">37</td>
+            <td class="w3-center" id="b4">10</td>
             <td class="w3-justify">
               <li>Work from home</li>
               <li>Advance salary for 1 month as loan</li>
@@ -117,10 +119,10 @@
             </td>
           </tr>
           <tr class="w3-my-color-norm">
-            <td class="w3-center">UI-Pro</td>
-            <td class="w3-center">63</td>
-            <td class="w3-center">39</td>
-            <td class="w3-center">5</td>
+            <td class="w3-center" id="c1">UI-Pro</td>
+            <td class="w3-center" id="c2">63</td>
+            <td class="w3-center" id="c3">39</td>
+            <td class="w3-center" id="c4">5</td>
             <td class="w3-justify">
               <li>Work from home</li>
               <li>Covid testing facility</li>
@@ -128,20 +130,20 @@
             </td>
           </tr>
           <tr class="w3-green">
-            <td class="w3-center">Power-brainer</td>
-            <td class="w3-center">39</td>
-            <td class="w3-center">19</td>
-            <td class="w3-center">3</td>
+            <td class="w3-center" id="d1">Power-brainer</td>
+            <td class="w3-center" id="d2">39</td>
+            <td class="w3-center" id="d3">19</td>
+            <td class="w3-center" id="d4">3</td>
             <td class="w3-justify">
               <li>Work from home</li>
               
             </td>
           </tr>
           <tr class="w3-red">
-            <td class="w3-center">Phi-Solutions</td>
-            <td class="w3-center">97</td>
-            <td class="w3-center">47</td>
-            <td class="w3-center">16</td>
+            <td class="w3-center" id="e1">Phi-Solutions</td>
+            <td class="w3-center" id="e2">97</td>
+            <td class="w3-center" id="e3">47</td>
+            <td class="w3-center" id="e4">16</td>
             <td class="w3-justify">
               <li>Work from home</li>
               <li>Advance salary for 1 month as loan</li>
@@ -150,10 +152,10 @@
             </td>
           </tr>
           <tr class="w3-my-color-norm">
-            <td class="w3-center">ThinkIT</td>
-            <td class="w3-center">50</td>
-            <td class="w3-center">20</td>
-            <td class="w3-center">6</td>
+            <td class="w3-center" id="f1">ThinkIT</td>
+            <td class="w3-center" id="f2">50</td>
+            <td class="w3-center" id="f3">20</td>
+            <td class="w3-center" id="f4">6</td>
             <td class="w3-justify">
               <li>Work from home</li>
               <li>Advance salary for 3 month as loan</li>
@@ -241,6 +243,35 @@
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
     }
+    function loadXMLDoc() {
+      var text="<clients_employee_covid_status><title>Client ID #111</title><company><name>Q-Analytics1</name><domain>Domain: Data Analytics</domain>"
+        +"</company><confirmed>Confirmed: 40</confirmed><recovered>Recovered: 23</recovered><deaths>Deaths: 2</deaths></clients_employee_covid_status>"
+        parser = new DOMParser();
+		xmlDoc1 = parser.parseFromString(text,"text/xml");
+
+		alert(xmlDoc1.getElementsByTagName("confirmed")[0].childNodes[0].nodeValue);
+		/*var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		    	alert('abcd');
+		    	myFunction(this);
+		    }
+		};
+		xhttp.open("GET", "test.xml", true);
+		xhttp.send();*/
+		//myFunction();
+		var xml = (new XMLSerializer()).serializeToString("../test.xml");
+		//var sessions = xmlDoc.getElementsByTagName("title");
+        //var txt = getContent(sessions);
+        alert(xml);
+		
+	}
+	function myFunction() {
+	    
+	    alert(xmlDoc);
+	    //document.getElementById("demo").innerHTML =
+	    //xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+	}
   </script>
   
   <map name="1947120">
