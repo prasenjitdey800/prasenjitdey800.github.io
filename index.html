@@ -79,7 +79,7 @@
             
       </ol>
       <h3 id="covid">Our clients - Covid-19 stats  
-      	<button type="button" onclick="loadXMLDoc()">Load data</button>
+        <button type="button" onclick="myFunction()">Load data</button>
       </h3>
       
       <table class="w3-table w3-striped w3-bordered">
@@ -192,7 +192,7 @@
     </aside>
   
 
-  	<aside class="right_article"><object data="images\test3.jpg" width="100%" height="270"></object></aside>
+    <aside class="right_article"><object data="images\test3.jpg" width="100%" height="270"></object></aside>
     <aside class="right_article"><img src="images\test2.jpg" alt="" width="400" height="200" class="placeholder" id="scream"/></aside>
     <aside class="right_article"><canvas alt="" width="400" height="120" class="placeholder" id="myCanvas"></canvas> 
       <p class="w3-center"><button onclick="myCanvas()">Get more idea about HRM</button></p>
@@ -247,17 +247,68 @@
       var text="<clients_employee_covid_status><title>Client ID #111</title><company><name>Q-Analytics1</name><domain>Domain: Data Analytics</domain>"
         +"</company><confirmed>Confirmed: 40</confirmed><recovered>Recovered: 23</recovered><deaths>Deaths: 2</deaths></clients_employee_covid_status>"
         parser = new DOMParser();
-		xmlDoc1 = parser.parseFromString(text,"text/xml");
+    xmlDoc1 = parser.parseFromString(text,"text/xml");
 
-		alert(xmlDoc1.getElementsByTagName("confirmed")[0].childNodes[0].nodeValue);
-		
-	}
-	function myFunction() {
-	    
-	    alert(xmlDoc);
-	    //document.getElementById("demo").innerHTML =
-	    //xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
-	}
+    alert(xmlDoc1.getElementsByTagName("confirmed")[0].childNodes[0].nodeValue);
+    
+  }
+  function myFunction() {
+      
+      let xmlContent='';
+      fetch('test.xml').then((response)=>{
+        response.text().then((xml)=>{
+          xmlContent=xml;
+          alert(xml);
+          let parser=new DOMParser();
+          let xmlDOM=parser.parseFromString(xmlContent,'application/xml');
+          let name=xmlDOM.querySelectorAll('name');
+
+          var i="a";
+          var j=1;
+          name.forEach(bookXmlNode=>{
+            //alert(i+j+bookXmlNode.innerHTML);
+            document.getElementById(i+j).innerHTML=bookXmlNode.innerHTML;
+            i=String.fromCharCode(i.charCodeAt(0) + 1);;
+          });
+
+          let confirmed=xmlDOM.querySelectorAll('confirmed');
+
+          var i="a";
+          j++;
+          confirmed.forEach(bookXmlNode=>{
+            var res=bookXmlNode.innerHTML.split(" ");
+            //alert(res[1]);
+            document.getElementById(i+j).innerHTML=res[1];
+            i=String.fromCharCode(i.charCodeAt(0) + 1);;
+          });
+
+
+          let recovered=xmlDOM.querySelectorAll('recovered');
+
+          var i="a";
+          j++;
+          recovered.forEach(bookXmlNode=>{
+            var res=bookXmlNode.innerHTML.split(" ");
+            //alert(res[1]);
+            document.getElementById(i+j).innerHTML=res[1];
+            i=String.fromCharCode(i.charCodeAt(0) + 1);;
+          });
+
+
+          let deaths=xmlDOM.querySelectorAll('deaths');
+
+          var i="a";
+          j++;
+          deaths.forEach(bookXmlNode=>{
+            var res=bookXmlNode.innerHTML.split(" ");
+            //alert(res[1]);
+            document.getElementById(i+j).innerHTML=res[1];
+            i=String.fromCharCode(i.charCodeAt(0) + 1);;
+          });
+
+        });
+      });
+  }
   </script>
   
   <map name="1947120">
