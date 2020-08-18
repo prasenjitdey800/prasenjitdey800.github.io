@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<?xml-stylesheet type="text/xsl" href="test1.xsl"?>
-<document>
+<?xml-stylesheet type="text/xsl" href="https://localhost/prasenjitdey800.github.io/XML/test1.xsl"?>
+<document xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>This Page Shows the COVID status of employees of different client companies</title>
   <title>Internal DTD and CSS Styling to XML Respectively</title>
-
-  <clients_employee_covid_status>
-    	<title>Client ID #111</title> 
+  <!-- Comment: This is a list of Companies -->
+  <clients_employee_covid_status client_id="111">
+    	<site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>23</recov> 
+        <conf>40</conf>
+        <dea>2</dea>
         <company>
-        	<name>Q-Analytics1</name>
+        	<name>Q-Analytics</name>
         	<domain>Domain: Data Analytics</domain>
         </company>
         <confirmed>Confirmed: 40</confirmed> 
-        <recovered>Recovered: 23</recovered> 
-        <deaths>Deaths: 2</deaths>  
+        <recovered>Recovered: 23</recovered>
+        <deaths>Deaths: 2</deaths>
+
     </clients_employee_covid_status> 
 
-    <clients_employee_covid_status>
-        <title>Client ID #112</title> 
+    <clients_employee_covid_status client_id="112">
+        <site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>37</recov> 
+        <conf>70</conf>
+        <dea>10</dea>
         <company>
             <name>Client-hub</name>
             <domain>Domain: Client Engagement</domain>
@@ -26,8 +33,11 @@
         <deaths>Deaths: 10</deaths>  
     </clients_employee_covid_status>
 
-    <clients_employee_covid_status>
-        <title>Client ID #113</title> 
+    <clients_employee_covid_status client_id="113">
+        <site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>39</recov> 
+        <conf>63</conf>
+        <dea>5</dea>
         <company>
             <name>UI-Pro</name>
             <domain>Domain: UI/UX</domain>
@@ -37,8 +47,11 @@
         <deaths>Deaths: 5</deaths>  
     </clients_employee_covid_status>
 
-    <clients_employee_covid_status>
-        <title>Client ID #114</title> 
+    <clients_employee_covid_status client_id="114">
+        <site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>19</recov> 
+        <conf>39</conf>
+        <dea>3</dea>
         <company>
             <name>Power-Brainer</name>
             <domain>Domain: Data Analytics</domain>
@@ -48,8 +61,11 @@
         <deaths>Deaths: 3</deaths>  
     </clients_employee_covid_status>
     
-    <clients_employee_covid_status>
-        <title>Client ID #115</title> 
+    <clients_employee_covid_status client_id="115">
+        <site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>47</recov> 
+        <conf>97</conf>
+        <dea>16</dea>
         <company>
             <name>Phi-Solutions</name>
             <domain>Domain: Data Analytics</domain>
@@ -59,8 +75,11 @@
         <deaths>Deaths: 16</deaths>  
     </clients_employee_covid_status>
 
-    <clients_employee_covid_status>
-        <title>Client ID #116</title> 
+    <clients_employee_covid_status client_id="116">
+        <site xlink:type="simple" xlink:href="https://www.w3schools.com">Go to site</site>
+        <recov>20</recov> 
+        <conf>50</conf>
+        <dea>6</dea>
         <company>
             <name>ThinkIT</name>
             <domain>Domain: IT solutions</domain>
