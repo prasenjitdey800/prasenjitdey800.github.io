@@ -10,9 +10,9 @@
  </tr>
 <xsl:for-each select="document/clients_employee_covid_status">
  <tr>
- <td><xsl:value-of select="name"/>
+ <td><xsl:value-of select="company/name"/>
  </td>
- <td><xsl:value-of select="domain"/>
+ <td><xsl:value-of select="company/domain"/>
  </td>
  </tr>
  </xsl:for-each>
