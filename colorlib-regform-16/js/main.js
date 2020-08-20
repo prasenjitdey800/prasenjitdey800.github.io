@@ -89,7 +89,7 @@
     onfocusout: function(element) {
         $(element).valid();
     },
-});
+   });
 
     jQuery.extend(jQuery.validator.messages, {
         required: "",

@@ -76,7 +76,7 @@
 				    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUTXQiJwJbVPWxJtIW2RMWuDGxKg3z9B4&callback=initMap">
 				    </script> -->
 
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" name="register-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
@@ -85,11 +85,11 @@
                                 </div>
                                 <div class="form-input">
                                     <label for="last_name" class="required">Last name</label>
-                                    <input type="text" name="last_name" id="last_name" placeholder="Eg. Smith"/>
+                                    <input type="text" name="last_name" id="last_name" placeholder="Eg. Smith" />
                                 </div>
                                 <div class="form-input">
                                     <label for="company" class="required">Company</label>
-                                    <input type="text" name="company" id="company" placeholder="Eg. Q Analytics"/>
+                                    <input type="text" name="company" id="company" placeholder="Eg. Q Analytics" />
                                 </div>
                                 <div class="form-input">
                                     <label for="email" class="required">Email</label>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="form-input">
                                     <label for="phone_number" class="required">Phone number</label>
-                                    <input type="number" name="phone_number" id="phone_number" placeholder="Eg. +91-9989898999"/>
+                                    <input type="text" name="phone_number" id="phone_number" placeholder="Eg. +91-9989898999" />
                                 </div>
                                 <div class="form-input">
                                     <label for="phone_number" class="required">Date of Birth</label>
@@ -207,7 +207,7 @@
                             </div>
                         </div>
                         <div class="form-submit">
-                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" onclick="return combined()" />
                             <input type="reset" value="Reset" class="submit" id="resets" name="resets" />
                         </div>
                     </form>
@@ -224,5 +224,67 @@
     <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function email_check(){
+            var patt=new RegExp("[a-z0-9]+@[a-z]+.[a-z]+","i");
+            var str=document.forms["register-form"]["email"].value;
+            if(!patt.test(str)){
+                alert("Enter a valid email!!!");
+                document.getElementById("email").focus();
+                return false;
+            }
+            //alert("Email filled");
+            return true;
+        }
+        function first_name_check(){
+            var str=document.forms["register-form"]["first_name"].value;
+            var patt=new RegExp("[a-z]+","i");
+            if(!patt.test(str)){
+                alert("Enter a valid first name");
+                document.getElementById("first_name").focus();
+                return false;
+            }
+            //alert("Email filled");
+            return true;
+        }
+        function last_name_check(){
+            var str=document.forms["register-form"]["last_name"].value;
+            var patt=new RegExp("[a-z]+","i");
+            if(!patt.test(str)){
+                alert("Enter a valid last name!!!");
+                document.getElementById("last_name").focus();
+                return false;
+            }
+            //alert("Email filled");
+            return true;
+        }
+        function phone_checker(){
+            var str=document.forms["register-form"]["phone_number"].value;
+            var patt=new RegExp("[+][0-9]+-[0-9]{10}","i");
+            if(!patt.test(str)){
+                alert("Enter a valid phone number!!!");
+                document.getElementById("phone_number").focus();
+                return false;
+            }
+            //alert("Email filled");
+            return true;
+        }
+        function company_checker(){
+            var str=document.forms["register-form"]["company"].value;
+            var patt=new RegExp("[a-z0-9]","i");
+            if(!patt.test(str)){
+                alert("Enter a valid company name!!!");
+                document.getElementById("company").focus();
+                return false;
+            }
+            //alert("Email filled");
+            return true;
+        }
+
+        function combined(){
+            return email_check()&&phone_checker()&&first_name_check()&&last_name_check()&&company_checker();
+        }
+
+    </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
