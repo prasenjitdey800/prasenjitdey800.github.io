@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register for Ploy</title>
-
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
@@ -21,6 +20,7 @@
     </style> -->
 </head>
 <body >
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script>
 	<!-- <script type="text/javascript">
 		function getLocation() {
 		  if (navigator.geolocation) {
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="form-input">
                                     <label for="phone_number" class="required">Phone number</label>
-                                    <input type="text" name="phone_number" id="phone_number" placeholder="Eg. +91-9989898999" />
+                                    <input type="text" name="phone_number" id="phone_number" placeholder="Eg. 9989898999" />
                                 </div>
                                 <div class="form-input">
                                     <label for="phone_number" class="required">Date of Birth</label>
@@ -226,63 +226,126 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
         function email_check(){
-            var patt=new RegExp("[a-z0-9]+@[a-z]+.[a-z]+","i");
             var str=document.forms["register-form"]["email"].value;
-            if(!patt.test(str)){
-                alert("Enter a valid email!!!");
-                document.getElementById("email").focus();
-                return false;
-            }
-            //alert("Email filled");
-            return true;
-        }
-        function first_name_check(){
-            var str=document.forms["register-form"]["first_name"].value;
-            var patt=new RegExp("[a-z]+","i");
-            if(!patt.test(str)){
+            var letters =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$/;
+            //var patt=new RegExp("/^[a-z]+$/","i");
+            /*if(!patt.test(str)){
                 alert("Enter a valid first name");
                 document.getElementById("first_name").focus();
                 return false;
-            }
+            }*/
+            if(str.match(letters))
+		      {
+			      //alert('Your name have accepted : you can try another');
+			      return true;
+		      }
+		      else
+		      {
+			      alert('Please input valid email');
+			      return false;
+		      }
+        }
+        function first_name_check(){
+            var str=document.forms["register-form"]["first_name"].value;
+            var letters = /^[A-Za-z]+$/;
+            //var patt=new RegExp("/^[a-z]+$/","i");
+            /*if(!patt.test(str)){
+                alert("Enter a valid first name");
+                document.getElementById("first_name").focus();
+                return false;
+            }*/
+            if(str.match(letters))
+		      {
+			      //alert('Your name have accepted : you can try another');
+			      return true;
+		      }
+		      else
+		      {
+			      alert('Please input alphabet characters only in name');
+			      return false;
+		      }
             //alert("Email filled");
-            return true;
+            //return true;
         }
         function last_name_check(){
             var str=document.forms["register-form"]["last_name"].value;
-            var patt=new RegExp("[a-z]+","i");
-            if(!patt.test(str)){
-                alert("Enter a valid last name!!!");
-                document.getElementById("last_name").focus();
+            var letters = /^[A-Za-z]+$/;
+            //var patt=new RegExp("/^[a-z]+$/","i");
+            /*if(!patt.test(str)){
+                alert("Enter a valid first name");
+                document.getElementById("first_name").focus();
                 return false;
-            }
-            //alert("Email filled");
-            return true;
+            }*/
+            if(str.match(letters))
+		      {
+			      //alert('Your name have accepted : you can try another');
+			      return true;
+		      }
+		      else
+		      {
+			      alert('Please input alphabet characters only in name');
+			      return false;
+		      }
         }
         function phone_checker(){
             var str=document.forms["register-form"]["phone_number"].value;
-            var patt=new RegExp("[+][0-9]+-[0-9]{10}","i");
-            if(!patt.test(str)){
-                alert("Enter a valid phone number!!!");
-                document.getElementById("phone_number").focus();
+            var letters = /^\d{10}$/;
+            //var patt=new RegExp("/^[a-z]+$/","i");
+            /*if(!patt.test(str)){
+                alert("Enter a valid first name");
+                document.getElementById("first_name").focus();
                 return false;
-            }
-            //alert("Email filled");
-            return true;
+            }*/
+            if(str.match(letters))
+		      {
+			      //alert('Your name have accepted : you can try another');
+			      return true;
+		      }
+		      else
+		      {
+			      alert('Please input correct phone number');
+			      return false;
+		      }
         }
         function company_checker(){
             var str=document.forms["register-form"]["company"].value;
-            var patt=new RegExp("[a-z0-9]","i");
-            if(!patt.test(str)){
-                alert("Enter a valid company name!!!");
-                document.getElementById("company").focus();
+            var letters = /^[A-Za-z]+$/;
+            //var patt=new RegExp("/^[a-z]+$/","i");
+            /*if(!patt.test(str)){
+                alert("Enter a valid first name");
+                document.getElementById("first_name").focus();
                 return false;
-            }
-            //alert("Email filled");
-            return true;
+            }*/
+            if(str.match(letters))
+		      {
+			      //alert('Your name have accepted : you can try another');
+			      return true;
+		      }
+		      else
+		      {
+			      alert('Please input alphabet characters only in Company name');
+			      return false;
+		      }
         }
+        function validate(){
+		    var eighteenYearsAgo = moment().subtract(18, "years");
+		    var birthday = moment(document.forms["register-form"]["dob"].value);
 
+		    if (!birthday.isValid()) {
+		        alert("invalid date");
+		        return false;    
+		    }
+		    else if (eighteenYearsAgo.isAfter(birthday)) {
+		        alert("okay, your bday is valid");
+		        return true;    
+		    }
+		    else {
+		        alert("Age is less than 18");
+		        return false;    
+		    }
+		}
         function combined(){
-            return email_check()&&phone_checker()&&first_name_check()&&last_name_check()&&company_checker();
+            return email_check()&&phone_checker()&&first_name_check()&&last_name_check()&&company_checker()&&validate();
         }
 
     </script>
